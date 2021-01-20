@@ -211,7 +211,7 @@ Unused on other platforms.")
                   "PowerShell"
                   "-NoProfile"
                   "-ExecutionPolicy" "Bypass"
-                  "-Command" elcord--stdpipe-path "." elcord--discord-ipc-pipe)
+                  "-Command" (format "& '%s'" elcord--stdpipe-path) "." elcord--discord-ipc-pipe)
         :connection-type 'pipe
         :sentinel 'elcord--connection-sentinel
         :filter 'elcord--connection-filter
